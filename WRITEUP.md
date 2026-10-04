@@ -2,28 +2,28 @@
 
 ## What was the most challenging part of this assignment? Did you find HTML and CSS easy or difficult to work with?
 
-The most challenging part was creating interaction while staying completely within HTML and CSS. The crossword needed to support typing, keyboard navigation, touch interaction, and a solution reveal without JavaScript, so I had to rely on native browser behavior and semantic elements rather than scripting. I found the basic HTML straightforward, while CSS became more challenging when I started balancing responsive layout, accessibility, and consistent visual design at the same time.
+The most challenging part for me was building the crossword game without using JavaScript. I needed to make sure users could type in the boxes, use the keyboard, and reveal the answer with only HTML and CSS. HTML was not very difficult for me, but CSS was more challenging because I needed to make the website look good on both desktop and mobile.
 
 ## How did you build the puzzle grid, and what other options did you consider?
 
-I built the puzzle with CSS Grid and used one-character text inputs for the playable squares. Each input has an accessible name that describes its row, column, and relevant clue, and blocked cells are represented as non-input grid cells with a visually distinct dark background. I considered a CSS checkbox toggle for revealing the answer, but chose the native `details` and `summary` elements because they already support keyboard and touch interaction without extra tricks.
+I used CSS Grid to build the 5 by 5 crossword puzzle. For the squares that users can type in, I used input elements with a maximum length of one character. At first, I thought about using a checkbox to show the solution, but I decided to use the `details` and `summary` elements because they are simple and can work without JavaScript.
 
 ## What did you take into account when designing the site? Is there anything you are particularly proud of?
 
-I started with a small design system: a neutral background and text ramp, one blue accent, a consistent spacing scale, and reusable custom properties. I also limited body text width, used whitespace to group related information, and made the navigation adapt from a sticky desktop header to a fixed bottom navigation on small screens. I am particularly proud that the design remains simple while accessibility features such as skip links, visible focus states, semantic landmarks, and 44-pixel minimum interactive targets are integrated into the visual system.
+When I designed the website, I wanted it to be simple, clean, and easy to use. I used blue as the main color and tried to keep the same spacing, buttons, navigation, and style on all four pages. I am especially proud of the mobile version because the navigation moves to the bottom of the screen and the crossword can still be used on a small screen.
 
 ## Given more time or resources, what would you add?
 
-With more time, I would write a more original mini crossword with a larger set of conventional English clues and create additional visual assets for the arcade. I would also do more usability testing with screen readers and multiple mobile devices rather than relying only on browser emulation and automated checks. As later course projects allow JavaScript and Svelte, I would add richer game feedback while preserving the accessible structure established here.
+If I had more time, I would add more crossword puzzles and make the game more interesting. I would also test the website on more phones and with more accessibility tools. In future projects, when JavaScript or Svelte is allowed, I would like to add features such as checking answers, scores, and better game feedback.
 
 ## How many hours did you spend on this assignment?
 
-I spent approximately **10 hours** planning, implementing, testing, and refining the project.
+I spent approximately **10 hours** working on this assignment.
 
 ## Optional assumptions
 
-I assumed that clean directory URLs such as `/game/`, `/about/`, and `/contact/` satisfy the requested page organization when deployed as folders containing `index.html`. I also assumed that the solution reveal could use the native `details` element, as suggested in the assignment. I treated mobile usability and keyboard accessibility as requirements across every page rather than only on the puzzle page.
+I assumed that using folders with `index.html` files for `/game/`, `/about/`, and `/contact/` was acceptable for the page organization. I also assumed that using the native `details` element was acceptable for showing the puzzle solution. I tried to make all four pages work well on both desktop and mobile.
 
 ## Sources, external code/design, and AI disclosure
 
-I used an AI assistant to help plan, draft, and review portions of the HTML, CSS, puzzle content, and writeup for this assignment. The site does not import any JavaScript or CSS framework; all project styling is contained in the repository. The arcade logo is an original inline SVG asset created for this project, and the puzzle uses the historic Sator Square word pattern as its source material. I reviewed the generated work against the assignment requirements and am responsible for the submitted result.
+I used an AI assistant to help me with some parts of planning, writing, and reviewing the HTML, CSS, puzzle content, and writeup. I reviewed and tested the code before submitting the project. I did not use any JavaScript or CSS framework. The arcade logo is an SVG made for this project, and the crossword is based on the Sator Square word pattern.
