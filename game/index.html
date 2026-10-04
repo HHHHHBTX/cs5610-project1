@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A CSS-only mini crossword in Hang Liu's Arcade.">
+  <title>Mini Crossword | Hang Liu's Arcade</title>
+  <link rel="stylesheet" href="../css/shared.css">
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="../index.html">Hang Liu's Arcade</a>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="index.html" aria-current="page">Game</a></li>
+        <li><a href="../about/index.html">About</a></li>
+        <li><a href="../contact/index.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <header class="page-intro">
+    <p class="eyebrow">Game 01</p>
+    <h1>Mini Crossword</h1>
+    <p class="lede">A small five-by-five crossword built entirely with HTML and CSS. Click a white square or use Tab, then type one letter. Dark squares are blocked.</p>
+  </header>
+
+  <section class="section game-layout" aria-labelledby="puzzle-heading">
+    <div class="puzzle-shell">
+      <h2 id="puzzle-heading">Puzzle grid</h2>
+      <p id="puzzle-help">Enter one letter in each white square. Tab moves to the next open square.</p>
+
+      <div class="crossword" role="group" aria-describedby="puzzle-help" aria-label="Five by five mini crossword">
+        <div class="cell"><span class="number">1</span><label class="visually-hidden" for="r1c1">Row 1 column 1, 1 Across and 1 Down</label><input id="r1c1" type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" aria-label="Row 1, column 1, 1 Across and 1 Down"></div>
+        <div class="cell"><span class="number">2</span><label class="visually-hidden" for="r1c2">Row 1 column 2, 1 Across and 2 Down</label><input id="r1c2" type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" aria-label="Row 1, column 2, 1 Across and 2 Down"></div>
+        <div class="cell block" aria-label="Row 1, column 3, blocked square"></div>
+        <div class="cell"><span class="number">3</span><label class="visually-hidden" for="r1c4">Row 1 column 4, 3 Across and 3 Down</label><input id="r1c4" type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" aria-label="Row 1, column 4, 3 Across and 3 Down"></div>
+        <div class="cell"><span class="number">4</span><label class="visually-hidden" for="r1c5">Row 1 column 5, 3 Across and 4 Down</label><input id="r1c5" type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" aria-label="Row 1, column 5, 3 Across and 4 Down"></div>
+        <div class="cell"><span class="number">5</span><label class="visually-hidden" for="r2c1">Row 2 column 1, 5 Across and 1 Down</label><input id="r2c1" type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" aria-label="Row 2, column 1, 5 Across and 1 Down"></div>
+        <div class="cell"><label class="visually-hidden" for="r2c2">Row 2 column 2, 5 Across and 2 Down</label><input id="r2c2" type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" aria-label="Row 2, column 2, 5 Across and 2 Down"></div>
+        <div class="cell"><label class="visually-hidden" for="r2c3">Row 2 column 3, 5 Across</label><input id="r2c3" type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" aria-label="Row 2, column 3, 5 Across"></div>
+        <div class="cell"><label class="visually-hidden" for="r2c4">Row 2 column 4, 5 Across and 3 Down</label><input id="r2c4" type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" aria-label="Row 2, column 4, 5 Across and 3 Down"></div>
+        <div class="cell"><label class="visually-hidden" for="r2c5">Row 2 column 5, 5 Across and 4 Down</label><input id="r2c5" type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" aria-label="Row 2, column 5, 5 Across and 4 Down"></div>
+        <div class="cell block" aria-label="Row 3, column 1, blocked square"></div>
+        <div class="cell"><span class="number">6</span><label class="visually-hidden" for="r3c2">Row 3 column 2, 6 Across and 2 Down</label><input id="r3c2" type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" aria-label="Row 3, column 2, 6 Across and 2 Down"></div>
+        <div class="cell"><label class="visually-hidden" for="r3c3">Row 3 column 3, 6 Across</label><input id="r3c3" type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" aria-label="Row 3, column 3, 6 Across"></div>
+        <div class="cell"><label class="visually-hidden" for="r3c4">Row 3 column 4, 6 Across and 3 Down</label><input id="r3c4" type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" aria-label="Row 3, column 4, 6 Across and 3 Down"></div>
+        <div class="cell block" aria-label="Row 3, column 5, blocked square"></div>
+        <div class="cell"><span class="number">7</span><label class="visually-hidden" for="r4c1">Row 4 column 1, 7 Across and 7 Down</label><input id="r4c1" type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" aria-label="Row 4, column 1, 7 Across and 7 Down"></div>
+        <div class="cell"><label class="visually-hidden" for="r4c2">Row 4 column 2, 7 Across and 2 Down</label><input id="r4c2" type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" aria-label="Row 4, column 2, 7 Across and 2 Down"></div>
+        <div class="cell"><label class="visually-hidden" for="r4c3">Row 4 column 3, 7 Across</label><input id="r4c3" type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" aria-label="Row 4, column 3, 7 Across"></div>
+        <div class="cell"><label class="visually-hidden" for="r4c4">Row 4 column 4, 7 Across and 3 Down</label><input id="r4c4" type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" aria-label="Row 4, column 4, 7 Across and 3 Down"></div>
+        <div class="cell"><span class="number">8</span><label class="visually-hidden" for="r4c5">Row 4 column 5, 7 Across and 8 Down</label><input id="r4c5" type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" aria-label="Row 4, column 5, 7 Across and 8 Down"></div>
+        <div class="cell"><span class="number">9</span><label class="visually-hidden" for="r5c1">Row 5 column 1, 9 Across and 7 Down</label><input id="r5c1" type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" aria-label="Row 5, column 1, 9 Across and 7 Down"></div>
+        <div class="cell"><label class="visually-hidden" for="r5c2">Row 5 column 2, 9 Across and 2 Down</label><input id="r5c2" type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" aria-label="Row 5, column 2, 9 Across and 2 Down"></div>
+        <div class="cell block" aria-label="Row 5, column 3, blocked square"></div>
+        <div class="cell"><span class="number">10</span><label class="visually-hidden" for="r5c4">Row 5 column 4, 10 Across and 3 Down</label><input id="r5c4" type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" aria-label="Row 5, column 4, 10 Across and 3 Down"></div>
+        <div class="cell"><label class="visually-hidden" for="r5c5">Row 5 column 5, 10 Across and 8 Down</label><input id="r5c5" type="text" maxlength="1" pattern="[A-Za-z]" autocomplete="off" aria-label="Row 5, column 5, 10 Across and 8 Down"></div>
+      </div>
+
+      <details>
+        <summary>Reveal solution</summary>
+        <p>The completed crossword is shown below. Dark squares are blocked.</p>
+        <div class="solution-grid" aria-label="Completed crossword solution">
+          <span>A</span><span>N</span><span class="solution-block">■</span><span>A</span><span>M</span>
+          <span>N</span><span>E</span><span>W</span><span>L</span><span>Y</span>
+          <span class="solution-block">■</span><span>W</span><span>E</span><span>B</span><span class="solution-block">■</span>
+          <span>A</span><span>L</span><span>B</span><span>U</span><span>M</span>
+          <span>M</span><span>Y</span><span class="solution-block">■</span><span>M</span><span>E</span>
+        </div>
+      </details>
+    </div>
+
+    <div class="clues">
+      <section aria-labelledby="across"><h2 id="across">Across</h2><ol>
+        <li value="1">Indefinite article before a vowel sound.</li>
+        <li value="3">First-person form of “be.”</li>
+        <li value="5">Recently; not previously existing.</li>
+        <li value="6">The network of pages you browse online.</li>
+        <li value="7">A collection of songs or photographs.</li>
+        <li value="9">Belonging to me.</li>
+        <li value="10">The person speaking or writing.</li>
+      </ol></section>
+      <section aria-labelledby="down"><h2 id="down">Down</h2><ol>
+        <li value="1">Indefinite article before a vowel sound.</li>
+        <li value="2">In a recent manner.</li>
+        <li value="3">A collection of songs or photographs.</li>
+        <li value="4">Belonging to me.</li>
+        <li value="7">First-person form of “be.”</li>
+        <li value="8">The person speaking or writing.</li>
+      </ol></section>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><p>Built by Hang Liu for CS5610 · Fall 2026.</p></footer>
+</body>
+</html>
